@@ -32,7 +32,7 @@
 ### 步驟
 1.  將此儲存庫 Clone 到本地：
     ```bash
-    git clone [https://github.com/你的帳號/WAVmediapaly.git](https://github.com/你的帳號/WAVmediapaly.git)
+    https://github.com/haoenchu/WAVmediapaly.git
     ```
 2.  使用 Visual Studio 開啟方案檔 (`WAVmediapaly.sln`)。
 3.  **還原 NuGet 套件**：
@@ -47,10 +47,3 @@
 2.  **UI 同步與防呆**：利用 `Timer` 處理進度條更新，並透過 `MouseDown/MouseUp` 事件解決自動更新與手動拖曳的衝突。
 3.  **執行緒安全**：在處理 NAudio 的 `PlaybackStopped` 事件時，學習到必須使用 `this.Invoke` 將控制權交回 UI 執行緒，以安全地更新按鈕狀態與進度條。
 
-## 🤝 貢獻與建議
-
-這是一個學習與練習性質的專案。如果您有任何改進建議（例如增加 MP3 支援、美化 UI 等），歡迎發起 Issue 或提交 Pull Request！
-
-## 📄 授權條款
-
-本專案採用 [MIT License](LICENSE) 授權。
