@@ -34,7 +34,6 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.ofdWAVFile = new System.Windows.Forms.OpenFileDialog();
             this.tbProgress = new System.Windows.Forms.TrackBar();
-            this.lblTotalTime = new System.Windows.Forms.Label();
             this.timerProgress = new System.Windows.Forms.Timer(this.components);
             this.tbVolume = new System.Windows.Forms.TrackBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -96,16 +95,6 @@
             this.tbProgress.Size = new System.Drawing.Size(494, 45);
             this.tbProgress.TabIndex = 5;
             this.tbProgress.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            // 
-            // lblTotalTime
-            // 
-            this.lblTotalTime.AutoSize = true;
-            this.lblTotalTime.Location = new System.Drawing.Point(556, 166);
-            this.lblTotalTime.Name = "lblTotalTime";
-            this.lblTotalTime.Size = new System.Drawing.Size(33, 12);
-            this.lblTotalTime.TabIndex = 6;
-            this.lblTotalTime.Text = "label1";
-            this.lblTotalTime.Click += new System.EventHandler(this.label1_Click);
             // 
             // timerProgress
             // 
@@ -185,7 +174,7 @@
             this.lblCurrentTime.TabIndex = 9;
             this.lblCurrentTime.Text = "00:00";
             // 
-            // Form1
+            // WAVmediaplayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -193,14 +182,13 @@
             this.Controls.Add(this.lblCurrentTime);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbVolume);
-            this.Controls.Add(this.lblTotalTime);
             this.Controls.Add(this.tbProgress);
             this.Controls.Add(this.btn_Play);
             this.Controls.Add(this.btn_Replay);
             this.Controls.Add(this.location);
             this.Controls.Add(this.btn_quit);
             this.Controls.Add(this.btn_Stop);
-            this.Name = "Form1";
+            this.Name = "WAVmediaplayer";
             this.Text = "WAV媒體播放器";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.location.ResumeLayout(false);
@@ -228,7 +216,6 @@
         private System.Windows.Forms.PictureBox btn_Replay;
         private System.Windows.Forms.PictureBox btn_Play;
         private System.Windows.Forms.TrackBar tbProgress;
-        private System.Windows.Forms.Label lblTotalTime;
         private System.Windows.Forms.Timer timerProgress;
         private System.Windows.Forms.TrackBar tbVolume;
         private System.Windows.Forms.PictureBox pictureBox1;

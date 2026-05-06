@@ -75,7 +75,6 @@ namespace WAVmediapaly
 
                     // 重要：設定進度條的最大值為音樂總秒數
                     tbProgress.Maximum = (int)audioFile.TotalTime.TotalSeconds;
-                    lblTotalTime.Text = audioFile.TotalTime.ToString(@"mm\:ss"); // 假設你有這個 Label
                 }
 
                 outputDevice.Play();
@@ -90,7 +89,7 @@ namespace WAVmediapaly
             }
         }
 
-        // --- 暫停 (你的暫停鍵叫做 btn_Stop) ---
+
         private void btn_Stop_Click(object sender, EventArgs e)
         {
             if (outputDevice != null && outputDevice.PlaybackState == PlaybackState.Playing)
@@ -109,7 +108,6 @@ namespace WAVmediapaly
             if (isLooping)
             {
                 btn_Replay.BackColor = Color.LightSkyBlue; // 變色提示開啟
-                // MessageBox.Show("已開啟重複播放");
             }
             else
             {
@@ -117,7 +115,6 @@ namespace WAVmediapaly
             }
         }
 
-        // --- 播放結束事件 (最重要：解決報錯的地方) ---
         private void OnPlaybackStopped(object sender, StoppedEventArgs e)
         {
             // 使用 Invoke 確保回到 UI 執行緒執行
